@@ -1,51 +1,29 @@
-# DLT Log Parser - Adapted for Diagnostic Log and Trace Format
-
-import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).parent))
-
 from drain3 import TemplateMiner
 from drain3.file_persistence import FilePersistence
 from drain3.template_miner_config import TemplateMinerConfig
-from llm_analyzer import LLMLogAnalyzer
-from config import RARE_PATTERN_THRESHOLD, FREQUENCY_THRESHOLD
+from src.llm_analyzer import LLMLogAnalyzer
+from src.config import RARE_PATTERN_THRESHOLD, FREQUENCY_THRESHOLD
 import json
 import csv
 
-# ============================================================================
-# CONFIGURATION: Input DLT Log File Path
-# ============================================================================
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-DLT_LOG_FILE = PROJECT_ROOT / "data" / "dlt_logs.csv"  # <-- CHANGE THIS
-# ============================================================================
+PROJECT_ROOT = Path(__file__).parent.parent
+DLT_LOG_FILE = PROJECT_ROOT / "data" / "dlt_logs.csv"
 
 class DLTLogParser:
-    """
-    Parser for DLT (Diagnostic Log and Trace) format logs
-    
-    DLT Format:
-    - Timestamp (Date and Time)
-    - Index (Log ID)
-    - ECU (Name)
-    - Application ID
-    - Log Message
-    """
     
     def __init__(self, use_llm=True):
-        # Configure Drain3
         config = TemplateMinerConfig()
         config.profiling_enabled = False
         config.drain_sim_th = 0.5
         config.drain_depth = 4
         config.drain_max_children = 100
         
-        # Set path for drain3 state file
-        project_root = Path(__file__).parent.parent.parent
+        project_root = Path(__file__).parent.parent
         state_file = project_root / "other" / "dlt_drain3_state.bin"
         persistence = FilePersistence(str(state_file))
         self.template_miner = TemplateMiner(persistence, config)
         
-        # Initialize LLM analyzer
         self.use_llm = use_llm
         if use_llm:
             self.llm_analyzer = LLMLogAnalyzer()
@@ -236,7 +214,7 @@ class DLTLogParser:
                 "example_logs": self.log_lines_by_cluster.get(cid, [])[:3]
             })
         
-        output_path = Path(__file__).parent.parent.parent / "other" / output_file
+        output_path = Path(__file__).parent.parent / "other" / output_file
         with open(output_path, "w") as f:
             json.dump(structured_data, f, indent=2)
         

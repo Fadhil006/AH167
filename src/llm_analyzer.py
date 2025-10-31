@@ -1,8 +1,7 @@
 import google.generativeai as genai
-from config import GEMINI_API_KEY, LLM_MODEL, LLM_TEMPERATURE
+from src.config import GEMINI_API_KEY, LLM_MODEL, LLM_TEMPERATURE
 
 class LLMLogAnalyzer:
-    """LLM-guided adaptive pattern extraction and analysis"""
     
     def __init__(self):
         genai.configure(api_key=GEMINI_API_KEY)

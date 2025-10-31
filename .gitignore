@@ -9,8 +9,8 @@ env/
 ENV/
 *.egg-info/
 
-# API Keys - DO NOT COMMIT
-src/custom/config.py
+# API Keys
+src/config.py
 
 # Drain3 state files (regenerated at runtime)
 *.bin

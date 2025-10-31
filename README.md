@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-Set your Gemini API key in `src/custom/config.py`:
+Set your Gemini API key in `src/config.py`:
 
 ```python
 GEMINI_API_KEY = "your-api-key-here"
@@ -27,12 +27,12 @@ GEMINI_API_KEY = "your-api-key-here"
 
 **Generic logs:**
 ```bash
-python -m src.custom.enhanced_parser
+python -m src.enhanced_parser
 ```
 
 **DLT automotive logs:**
 ```bash
-python -m src.custom.dlt_parser
+python -m src.dlt_parser
 ```
 
 ## Project Structure
@@ -40,14 +40,12 @@ python -m src.custom.dlt_parser
 ```
 LogSage/
 ├── src/
-│   ├── custom/
-│   │   ├── config.py          # Configuration
-│   │   ├── llm_analyzer.py    # LLM integration
-│   │   ├── enhanced_parser.py # Generic parser
-│   │   └── dlt_parser.py      # DLT parser
-│   └── external/
-├── data/                       # Sample logs
-└── other/                      # Output directory
+│   ├── config.py          # Configuration
+│   ├── llm_analyzer.py    # LLM integration
+│   ├── enhanced_parser.py # Generic parser
+│   └── dlt_parser.py      # DLT parser
+├── data/                  # Sample logs
+└── other/                 # Output directory
 ```
 
 ## How It Works
