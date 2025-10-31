@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+
+# API Keys - DO NOT COMMIT
+src/custom/config.py
+
+# Drain3 state files (regenerated at runtime)
+*.bin
+
+# Generated outputs (regenerated at runtime)
+other/structured_logs.json
+other/dlt_structured_logs.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local

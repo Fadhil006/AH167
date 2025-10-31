@@ -1,0 +1,45 @@
+2025-10-31 10:15:23 INFO User login successful for user_id=12345
+2025-10-31 10:16:45 ERROR Failed to connect to database: Connection timeout after 30 seconds
+2025-10-31 10:17:12 INFO Processing HTTP POST request from IP 192.168.1.100 to /api/users endpoint
+2025-10-31 10:18:33 WARNING Memory usage at 85% for service worker-3 on node-1
+2025-10-31 10:19:01 INFO User logout completed for user_id=12345 session_duration=3h45m
+2025-10-31 10:20:15 ERROR File not found: /var/log/application.log while rotating logs
+2025-10-31 10:21:47 INFO Starting incremental backup process for database prod-db-01 at 2025-10-31T10:21:47Z
+2025-10-31 10:22:30 INFO Successful authentication for user_id=67890 from location=US
+2025-10-31 10:23:55 WARNING Disk space critically low on /dev/sda1 (only 15% remaining, 2.3GB free)
+2025-10-31 10:24:18 INFO Processing GET request from 192.168.1.105 to fetch user profile
+2025-10-31 10:25:42 ERROR Authentication failed for admin user from IP 10.0.0.50 (invalid credentials, attempt 3/5)
+2025-10-31 10:26:09 INFO Database backup process completed successfully - 1.2GB transferred in 4m22s
+2025-10-31 10:27:33 WARNING CPU usage spike detected: 92% utilization on core 2, process_id=4521
+2025-10-31 10:28:51 INFO Redis cache cleared for session store - 1523 keys removed
+2025-10-31 10:29:14 ERROR Email notification delivery failed: SMTP server unavailable at smtp.example.com:587
+2025-10-31 10:30:27 INFO User login successful for user_id=54321
+2025-10-31 10:31:45 WARNING API rate limit exceeded for client abc123 - 1000 requests in 60 seconds
+2025-10-31 10:32:08 INFO Processing request from IP 192.168.1.110
+[2025-10-31T10:33:15.234Z] DEBUG Initializing connection pool with max_connections=50
+{timestamp: "2025-10-31 10:34:01", level: "ERROR", message: "NullPointerException in UserService.java:142"}
+Oct 31 10:35:22 server1 kernel: Out of memory: Kill process 1234 (java) score 856
+[10:36:45] CRITICAL - Database connection pool exhausted! Active: 100, Idle: 0, Waiting: 47
+2025/10/31 10:37:12 [warn] worker process 5678 exited on signal 11
+INFO 2025-10-31T10:38:00+00:00 [thread-pool-1] Starting transaction TX_12345 for account ACC_98765
+<2025-10-31 10:39:15> [payment-service] ERROR Payment processing failed: insufficient funds, account=78901, amount=$1250.00
+31/10/2025 10:40:33 - INFO - Scheduled job "data-cleanup" started by cron
+[ERROR][2025-10-31T10:41:12.567] Failed to acquire lock on resource /shared/data/temp.lock after 30 retries
+10:42:05.123 [main] INFO  com.example.Application - Application started successfully on port 8080
+2025-10-31 10:43:20 WARN  Deprecated API call detected: /v1/legacy/users (migrate to /v2/users)
+ERROR: 2025-10-31 10:44:35 - Unhandled exception in async task: concurrent modification detected
+[10:45:00] Security Alert: Multiple failed login attempts from IP 203.0.113.42 (15 attempts in 2 minutes)
+2025-10-31T10:46:12+00:00 NOTICE SSL certificate expires in 7 days - CN=*.example.com
+{ts:1698750973,lvl:"FATAL",msg:"Service mesh communication failure",src:"istio-proxy",dst:"user-service"}
+31-Oct-2025 10:48:00 [elasticsearch] WARN index [logs-2025.10] has exceeded 100GB size limit
+10:49:15 | INFO | health-check passed for all 5 microservices (response_time_avg: 45ms)
+<WARNING> 2025-10-31 10:50:30 Temperature alert: Server room exceeds threshold at 28°C
+2025-10-31 10:51:45 [audit-log] User admin modified permissions for role 'developer' (added: read_production_logs)
+ERROR - 2025-10-31T10:52:33.789Z - WebSocket connection dropped: client_id=ws_789, reason="ping timeout"
+[10:53:00] INFO: Garbage collection completed - Young Gen: 120ms, Old Gen: 0ms, Total: 120ms
+2025.10.31 10:54:15 [kafka-consumer] WARN Rebalancing consumer group 'log-processors' - 3 partitions affected
+31/10/2025 10:55:42 ERROR [MySQL] Deadlock detected between transactions TX_456 and TX_789 on table 'orders'
+10:56:30 - API Gateway: Rate limiting applied to IP 192.168.50.25, remaining quota: 100/10000 req/hour
+[2025-10-31 10:57:18] DEBUG SQL Query executed: SELECT * FROM users WHERE status='active' (execution_time: 1.23s)
+INFO: Container 'app-server-3' restarted due to health check failure (exit code: 137, OOMKilled)
+2025-10-31T10:59:05Z [monitoring] CRITICAL Disk I/O wait time exceeds 60% on /dev/nvme0n1
